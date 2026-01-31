@@ -1,0 +1,32 @@
+super + f
+	nemo
+
+super + l
+	slock
+
+XF86AudioRaiseVolume
+	amixer -q set Master 5%+ unmute
+
+XF86AudioLowerVolume
+	amixer -q set Master 5%- unmute
+
+XF86AudioMute
+	amixer -q set Master toggle
+
+Print
+	scrot ~/Pictures/Screenshots/%Y-%m-%d-%T.png
+
+XF86MonBrightnessUp
+        xbacklight -inc 10
+
+XF86MonBrightnessDown
+        if (($(cat /sys/class/backlight/intel_backlight/actual_brightness) > 9600 )); then xbacklight -dec 10 ;fi
+
+super + z
+        /home/mohamed/apps/zen/zen
+
+XF86AudioMicMute
+        amixer sset Capture toggle
+
+super + q
+        /home/mohamed/scripts/cmd_list.sh
